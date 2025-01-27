@@ -84,7 +84,7 @@
         text-align: center;
     }
 
-    ul{
+    .details ul{
         display: flex;
         justify-content: space-between;
         list-style: none;
@@ -114,54 +114,6 @@
         font-size: 0.8rem;
         color: #bb5808;
     }
-    /* button css */
-    /* Elegant Slide Button */
-.slide-button {
-    position: relative;
-    padding: 1.2rem 2.4rem;
-    font-size: 1.1rem;
-    color: black;
-    background: none;
-    border: 2px solid #bb5808;
-    border-radius: 8px;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.slide-content {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    position: relative;
-    z-index: 1;
-}
-
-.slide-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: #bb5808;
-    transition: transform 0.5s ease;
-    transform: skewX(-20deg);
-    
-}
-
-.slide-button:hover::before {
-    transform: skewX(-20deg) translateX(100%);
-    
-}
-
-.slide-button:hover .icon {
-    transform: translateX(5px);
-}
-
-.icon {
-    transition: transform 0.3s ease;
-}
-/* button css ends here*/
 
     </style>
 </head>
@@ -310,16 +262,7 @@
             <div class="money">₹ 30,500</div>
             <div class="des">Per Person</div>
             <!-- Elegant Slide Button -->
-            <div class="button-wrapper">
-                <button class="slide-button">
-                    <span class="slide-content">
-                        <span class="text">Download</span>
-                        <span class="icon">
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </span>
-                </button>
-            </div>
+            <a class="btn-solid-lg page-scroll" href="#intro">EXPLORE</a>
         </div>
     </div>
 </div>
