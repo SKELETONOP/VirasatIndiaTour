@@ -58,102 +58,37 @@
         z-index: 2; /* Ensures the header content appears above the overlay */
     }
 
-    .section{
-        width: 100%;
-        height: auto;
+    .tour-details{
+        display: flex;
+        justify-content: space-between;
         padding: 20px;
-        text-align: center;
-
+        margin: 20px auto;
+        width: 80vw;
+        border-radius: 10px;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+        
+        
     }
-    .section-2{
-        height: auto;
-        width: 100%;
-        background-image:linear-gradient(91.22deg, rgba(0, 5, 15, 0.8) 24.54%, rgba(0, 5, 15, 0.2) 100%), url("/images/luxary-car-section2.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 30px 20px;
-    }
-
-    .heading{
-        text-align: center;
-        color: #fff;
-        padding-top: 25px;
-
+    .image img{
+        width: 399px;
+        height: 336px;
     }
 
-    ul{
-        margin-top: 0;
-        padding: 0;
-    }
-    .about-choose-us li::before {
-    content: ">";
-    color: #f21136;
-    font-weight: bold;
-    display: inline-block;
-    font-size: 20px;
-    width: 10px;
-    margin-right: 8px;
-}
-
-
-.col{
-    display: flex;
-    text-align: start;
-    padding-top: 20px;
-}
-
-.about-choose-us li{
-    font-size: 16px;
-    line-height: 1.7;
-    list-style: none;
-    color: white;
-}
-
-.col1, .col2 {
-     flex: 1; /* Each takes up equal space (50% each) */
-      padding: 10px; /* Optional: add padding for spacing */
-      box-sizing: border-box; /* Include padding in the width calculation */
-      border: 1px solid #ddd;
-}
-.heading p{
-    display: flex;
-    word-wrap: break-word;
-    width: 80%;
-}
-
-.col1 li{
-    margin: 0;
-    
-    width: 100%;
-}
-.first-heading-lux{
-        font-size: 35px;
+    .name-tour{
+        width: 60vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
     }
 
-    .first-sub-lux{
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        padding: 5px;
+    .vl{
+        border-left: 0.5px solid #313030;
+        height: 80%;
+        margin-top: 5%;
     }
 
 
-@media (max-width:768px) {
-    .first-heading-lux{
-        font-size: 24px;
-    }
 
-    .first-sub-lux{
-        text-align: left;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .about-choose-us li{
-        font-size: 12px;
-    }
-    
-}
     </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -277,7 +212,40 @@
     </div> <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 
-<h1 style="text-align: center;">here will be the sections for tour Packages</h1>
+<div class="tour-details">
+    <div class="image">
+        <img src="/images/project-1.jpg" alt="">
+    </div>
+    <div class="name-tour">
+        <div class="details">
+            <h2 >JOURNEY TO EMPIRE</h2>
+            <p >A TASTE OF ROYALTY (Jaipur 2N - Bikaner 1N - Jaisalmer 2N - Jodhpur 1N - Mount Abu 2N -)</p>
+        </div>
+        <div class="vl"></div>
+        <div class="Budget">
+            <div class="money">₹ 30,500</div>
+            <div class="des">Per Person</div>
+            <button><a href="#">View Tour</a></button>
+        </div>
+    </div>
+</div>
+<section class="tour-details">
+    <div class="image">
+        <img src="/images/project-1.jpg" alt="">
+    </div>
+    <div class="name-tour">
+        <div class="details">
+            <h2>JOURNEY TO EMPIRE</h2>
+            <p>A TASTE OF ROYALTY (Jaipur 2N - Bikaner 1N - Jaisalmer 2N - Jodhpur 1N - Mount Abu 2N -)</p>
+        </div>
+        <div class="vl"></div>
+        <div class="Budget">
+            <div class="money">₹ 30,500</div>
+            <div class="des">Per Person</div>
+            <button><a href="#">View Tour</a></button>
+        </div>
+    </div>
+</section>
 
     <!-- Breadcrumbs -->
     <div class="ex-basic-1">
