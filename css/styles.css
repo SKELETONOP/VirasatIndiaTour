@@ -141,7 +141,8 @@ strong {
 
 .section-title {
 	color: #bb5808;
-	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
+	font-size: 20px;
+	
 }
 
 .btn-solid-reg {
@@ -806,7 +807,7 @@ input[type='checkbox'] {
 /*     05. Intro     */
 /*********************/
 .basic-1 {
-	padding-top: 6.5rem;
+	padding-top: 2.5rem;
 	padding-bottom: 3rem;
 }
 
@@ -1182,6 +1183,7 @@ input[type='checkbox'] {
 .slider h2 {
 	margin-bottom: 0.75rem;
 	text-align: center;
+	font-size: 20px;
 }
 
 .slider .slider-container {
