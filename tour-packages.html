@@ -76,12 +76,15 @@
     }
 
     .name-tour{
-        width: 60vw;
+        width: 50vw;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: top;
         text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
     }
 
     .details ul{
@@ -97,24 +100,34 @@
         flex-direction: column;
         padding: 10px;
         text-align: center;
-        color: #bb5808;
+        
+        text-transform: uppercase;
     }
 
     .details h2{
         font-size: 2rem;
-        color: #bb5808;
+        
     }
 
     .details p{
         font-size: 1.2rem;
-        color: #bb5808;
+        
     }
 
     .details ul li span{
         font-size: 0.8rem;
-        color: #bb5808;
+        
     }
-
+    
+    .budget{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #F1F0EF;
+    }
     </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -250,39 +263,67 @@
                 <li>Jaipur 
                     <span>(2 Nights)</span>
                 </li>
-                <li>Bikaner 1N</li>
-                <li>Jaisalmer 2N</li>
-                <li>Jodhpur 1N</li>
-                <li>Mount Abu 2N</li>
+                <li>Bikaner
+                    <span>(2 Nights)</span>
+                </li>
+                <li>Jaisalmer
+                    <span>(2 Nights)</span>
+                </li>
+                <li>Jodhpur
+                    <span>(2 Nights)</span>
+                </li>
+                <li>Mount Abu
+                    <span>(2 Nights)</span>
+                </li>
                 
             </ul>
         </div>
         
-        <div class="Budget">
-            <div class="money">₹ 30,500</div>
-            <div class="des">Per Person</div>
+        <div class="budget">
+            <div class="money">₹ 30,500 <span>Per Person</span></div>
+            
             <!-- Elegant Slide Button -->
             <a class="btn-solid-lg page-scroll" href="#intro">EXPLORE</a>
         </div>
     </div>
 </div>
-<section class="tour-details">
+<div class="tour-details">
     <div class="image">
         <img src="/images/project-1.jpg" alt="">
     </div>
     <div class="name-tour">
         <div class="details">
-            <h2>JOURNEY TO EMPIRE</h2>
-            <p>A TASTE OF ROYALTY (Jaipur 2N - Bikaner 1N - Jaisalmer 2N - Jodhpur 1N - Mount Abu 2N -)</p>
+            <h2 >JOURNEY TO EMPIRE</h2>
+            <p >A TASTE OF ROYALTY</p>
+            <ul>
+                <li>Jaipur 
+                    <span>(2 Nights)</span>
+                </li>
+                <li>Bikaner
+                    <span>(2 Nights)</span>
+                </li>
+                <li>Jaisalmer
+                    <span>(2 Nights)</span>
+                </li>
+                <li>Jodhpur
+                    <span>(2 Nights)</span>
+                </li>
+                <li>Mount Abu
+                    <span>(2 Nights)</span>
+                </li>
+                
+            </ul>
         </div>
-        <div class="vl"></div>
-        <div class="Budget">
-            <div class="money">₹ 30,500</div>
-            <div class="des">Per Person</div>
-            <button><a href="#">View Tour</a></button>
+        
+        <div class="budget">
+            <div class="money">₹ 30,500 <span>Per Person</span></div>
+            
+            <!-- Elegant Slide Button -->
+            <a class="btn-solid-lg page-scroll" href="#intro">EXPLORE</a>
         </div>
     </div>
-</section>
+</div>
+
 
     <!-- Breadcrumbs -->
     <div class="ex-basic-1">
