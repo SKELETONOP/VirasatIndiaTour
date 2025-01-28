@@ -58,76 +58,223 @@
         z-index: 2; /* Ensures the header content appears above the overlay */
     }
 
-    .tour-details{
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        margin: 20px auto;
-        width: 80vw;
-        border-radius: 10px;
-        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-        background-color: #F1F0EF;
-        
-    }
-    .image img{
-        width: 399px;
-        height: 336px;
-        border-radius: 10px;
+    .tour-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    background-color: #F1F0EF;
+}
+
+.image img {
+    width: 399px;
+    height: 336px;
+    border-radius: 10px;
+}
+
+.name-tour {
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: top;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.details ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.path {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.details h2 {
+    font-size: 2rem;
+}
+
+.details p {
+    font-size: 1.5rem;
+}
+
+.details ul li span {
+    font-size: 0.5rem;
+}
+
+.budget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F1F0EF;
+}
+
+.money {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.details .bottom {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    display: flex; /* Use flex layout for horizontal alignment */
+    gap: 10px; /* Space between items */
+    padding: 10px 0; /* Add padding for better spacing */
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none;
+}
+
+.bottom::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.details .bottom ul {
+    display: flex; /* Ensure list items are in a single row */
+    gap: 10px; /* Space between list items */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove default list styling */
+}
+
+.details .bottom ul li {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    background-color: #f1f1f1; /* Optional: Add a background color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    max-width: fit-content; /* Set a minimum width for list items */
+    text-align: center; /* Center align text */
+}
+
+.details .bottom ul li .inner {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Center align content */
+}
+
+.details .bottom ul li .path {
+    margin-left: 10px;
+    font-size: 1rem; /* Adjust arrow size */
+    color: black;
+}
+
+.details .bottom {
+    scroll-behavior: smooth;
+}
+
+/* Media query for devices with a max width of 768px (tablets and small screens) */
+@media (max-width: 768px) {
+    .tour-details {
+        flex-direction: column; /* Stack content vertically */
+        width: 95vw; /* Adjust width for smaller screens */
+        padding: 15px; /* Reduce padding */
     }
 
-    .name-tour{
-        width: 50vw;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: top;
-        text-align: center;
-        background-color: white;
-        border-radius: 10px;
-        padding: 20px;
+    .image img {
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
     }
 
-    .details ul{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        padding-left: 30px;
-        text-align: left;
+    .name-tour {
+        width: 100%; /* Full width */
+        padding: 15px; /* Adjust padding */
     }
 
-    .details ul li{
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-        
-        text-transform: uppercase;
+    .details ul {
+        display: flex; /* Display items in a row */
+        flex-direction: row; /* Stack items vertically */
+        padding-left: 0; /* Remove unnecessary padding */
+        flex-wrap: nowrap; /* Wrap items to next line if necessary */
+        gap: 10px; /* Add space between items */
     }
 
-    .details h2{
-        font-size: 2rem;
-        
+    .details ul li {
+        width: 100%; /* Full width for list items */
+        font-size: 0.9rem; /* Slightly increase font size for readability */
     }
 
-    .details p{
-        font-size: 1.2rem;
-        
+    .budget {
+        flex-direction: column; /* Stack items vertically */
+        padding: 15px; /* Adjust padding */
     }
 
-    .details ul li span{
-        font-size: 0.8rem;
-        
+    .money {
+        font-size: 1.2rem; /* Adjust font size */
     }
+
+    .details .bottom {
+        overflow-x: scroll; /* Enable horizontal scroll on mobile */
+        white-space: nowrap; /* Ensure list items stay on a single line */
+    }
+
+    .details .bottom ul {
+        flex-wrap: nowrap; /* Ensure no wrapping occurs */
+    }
+}
+
+/* Media query for devices with a max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    .tour-details {
+        width: 100%; /* Full width for very small screens */
+        margin: 10px auto; /* Adjust margins */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .image img {
+        max-width: 100%; /* Ensure image does not exceed container */
+    }
+
+    .details h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .details p {
+        font-size: 1rem; /* Reduce paragraph size */
+    }
+
+    .details ul li {
+        font-size: 0.8rem; /* Reduce text size further */
+    }
+
+    .money {
+        font-size: 1rem; /* Further reduce font size */
+    }
+}
+
+
     
-    .budget{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #F1F0EF;
-    }
     </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -257,26 +404,55 @@
     </div>
     <div class="name-tour">
         <div class="details">
-            <h2 >JOURNEY TO EMPIRE</h2>
-            <p >A TASTE OF ROYALTY</p>
-            <ul>
-                <li>Jaipur 
-                    <span>(2 Nights)</span>
+            <div class="top">
+                <h2 >JOURNEY TO EMPIRE</h2>
+                <p >A TASTE OF ROYALTY</p>
+            </div>
+            <div class="bottom">
+                <ul>
+                <li>
+                    <div class="inner">Jaipur 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Bikaner
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Bikaner 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Jaisalmer
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Jaisalmer 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Jodhpur
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Jodhpur 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Mount Abu
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Mount Abu 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path" style="visibility: hidden;">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                
-            </ul>
+               
+                </ul>
+            </div>
         </div>
         
         <div class="budget">
@@ -293,26 +469,55 @@
     </div>
     <div class="name-tour">
         <div class="details">
-            <h2 >JOURNEY TO EMPIRE</h2>
-            <p >A TASTE OF ROYALTY</p>
-            <ul>
-                <li>Jaipur 
-                    <span>(2 Nights)</span>
+            <div class="top">
+                <h2 >JOURNEY TO EMPIRE</h2>
+                <p >A TASTE OF ROYALTY</p>
+            </div>
+            <div class="bottom">
+                <ul>
+                <li>
+                    <div class="inner">Jaipur 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Bikaner
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Bikaner 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Jaisalmer
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Jaisalmer 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Jodhpur
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Jodhpur 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                <li>Mount Abu
-                    <span>(2 Nights)</span>
+                <li>
+                    <div class="inner">Mount Abu 
+                        <span>(2 Nights)</span>
+                    </div>
+                    <div class="path" style="visibility: hidden;">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </li>
-                
-            </ul>
+               
+                </ul>
+            </div>
         </div>
         
         <div class="budget">
@@ -323,6 +528,8 @@
         </div>
     </div>
 </div>
+
+
 
 
     <!-- Breadcrumbs -->
