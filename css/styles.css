@@ -1497,6 +1497,10 @@ input[type='checkbox'] {
 	background-color: #fbfbfb;
 	text-align: center;
 }
+#team-carousel{
+	display: flex;
+	justify-content: space-around;
+}
 
 .basic-2 h2 {
 	margin-bottom: 0.75rem;
@@ -1570,6 +1574,7 @@ input[type='checkbox'] {
 .basic-2 .fa-stack:hover .fa-stack-1x {
 	color: #bb5808;
 }
+
 
 
 /*********************/
