@@ -192,7 +192,7 @@
 }
 
 .details .bottom {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 /* Media query for devices with a max width of 768px (tablets and small screens) */
@@ -274,6 +274,42 @@
     }
 }
 
+
+.out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}    
+
+.heading-T {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #F1F0EF;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    width: 80%;
+}
+
+.heading-T h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    .heading-T h1{
+        font-size: 1.5rem;
+    }
+    
+}
 
     </style>
 </head>
@@ -383,6 +419,9 @@
     </header> <!-- end of ex-header -->
     <!-- end of header -->
 
+    <div class="out"><div class="heading-T"> 
+        <h1>RAJASTHAN</h1>
+    </div></div>
 
     <!-- Breadcrumbs -->
     <div class="ex-basic-1">
